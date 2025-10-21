@@ -1,11 +1,17 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { NAV_ITEMS } from '@/lib/constants'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const NavItems = () => {
   const pathname = usePathname()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const isActive = (path: string) => pathname === path
 
@@ -16,7 +22,7 @@ const NavItems = () => {
           <Link 
             href={href} 
             className={`hover:text-yellow-500 transition-colors ${
-              isActive(href) ? 'text-gray-100' : ''
+              mounted && isActive(href) ? 'text-gray-100' : ''
             }`}
           >
             {label}
