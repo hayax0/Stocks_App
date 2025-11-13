@@ -1,14 +1,17 @@
 import Header from "@/components/Header";
+import { Providers } from "./providers";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main className="min-h-screen text-gray-400">
-     <Header />
+    <Providers>
+      <main className="min-h-screen text-gray-400">
+        <Header />
         <div className="container py-10">
-          { children }
+          {children}
         </div>
-    </main>
-    )
+      </main>
+    </Providers>
+  )
 }
 
 export default Layout
