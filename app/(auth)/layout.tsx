@@ -23,7 +23,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           </blockquote>
           <div className="flex items-center justify-between">
             <div>
-              <cite className="auth-testimonial-author"> - Kai C. </cite>
+              <cite className="auth-testimonial-author">  - Matheus Fer. </cite>
               <p className="max-md:text-xs text-gray-500">Reatail investor </p>
             </div>
 
