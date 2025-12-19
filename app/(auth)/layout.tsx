@@ -1,8 +1,5 @@
 import Link from "next/link"
 import Image from "next/image"
-
-
-
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
 
