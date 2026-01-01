@@ -2,6 +2,7 @@ import { inngest } from "@/lib/inngest/client";
 import { PERSONALIZED_WELCOME_EMAIL_PROMPT, NEWS_SUMMARY_EMAIL_PROMPT } from "./prompts";
 import { sendWelcomeEmail, sendNewsSummaryEmail } from "../nodemailer";
 import { getAllUsersForNewsEmail } from "../actions/user.actions";
+import { getFormattedTodayDate } from "@/lib/utils";
 
 // Função 1: Email de Boas-vindas (Mantida igual, apenas formatada)
 export const sendSingUpEmail = inngest.createFunction(
@@ -102,7 +103,7 @@ export const sendDailyNewsSummary = inngest.createFunction(
             await step.run(`send-news-email-${user.id}`, async () => {
                 await sendNewsSummaryEmail({
                     email: user.email,
-                    date: new Date().toDateString(),
+                    date: getFormattedTodayDate(),
                     newsContent: userNewsSummary
                 });
             });
