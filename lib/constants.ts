@@ -1,10 +1,8 @@
 export const NAV_ITEMS = [
     { href: '/', label: 'Dashboard' },
     { href: '/search', label: 'Search' },
-     { href: '/watchlist', label: 'Watchlist' },
-    // { href: '/watchlist', label: 'Watchlist' },
+    { href: '/watchlist', label: 'Watchlist' },
 ];
-
 
 export const INVESTMENT_GOALS = [
     { value: 'Growth', label: 'Growth' },
@@ -37,24 +35,31 @@ export const CONDITION_OPTIONS = [
     { value: 'less', label: 'Less than (<)' },
 ];
 
-// TradingView Charts
 export const MARKET_OVERVIEW_WIDGET_CONFIG = {
-    colorTheme: 'dark', 
-    dateRange: '12M', 
-    locale: 'en', 
-    largeChartUrl: '', 
-    isTransparent: true, 
-    showFloatingTooltip: true, 
-    plotLineColorGrowing: '#0FEDBE', 
+    colorTheme: 'dark',
+    dateRange: '12M',
+    locale: 'en',
+    largeChartUrl: '',
+    isTransparent: true,
+    showFloatingTooltip: true,
+    plotLineColorGrowing: '#0FEDBE',
     plotLineColorFalling: '#0FEDBE',
-    gridLineColor: 'rgba(240, 243, 250, 0)', 
-    scaleFontColor: '#DBDBDB', 
-    belowLineFillColorGrowing: 'rgba(41, 98, 255, 0.12)', 
-    belowLineFillColorFalling: 'rgba(41, 98, 255, 0.12)', 
+    gridLineColor: 'rgba(240, 243, 250, 0)',
+    scaleFontColor: '#DBDBDB',
+    belowLineFillColorGrowing: 'rgba(41, 98, 255, 0.12)',
+    belowLineFillColorFalling: 'rgba(41, 98, 255, 0.12)',
     belowLineFillColorGrowingBottom: 'rgba(41, 98, 255, 0)',
     belowLineFillColorFallingBottom: 'rgba(41, 98, 255, 0)',
-    symbolActiveColor: 'rgba(15, 237, 190, 0.05)', 
+    symbolActiveColor: 'rgba(15, 237, 190, 0.05)',
     tabs: [
+        {
+            title: 'Crypto',
+            symbols: [
+                { s: 'BINANCE:BTCUSDT', d: 'Bitcoin' },
+                { s: 'BINANCE:ETHUSDT', d: 'Ethereum' },
+                { s: 'BINANCE:SOLUSDT', d: 'Solana' },
+            ],
+        },
         {
             title: 'Financial',
             symbols: [
@@ -77,23 +82,13 @@ export const MARKET_OVERVIEW_WIDGET_CONFIG = {
                 { s: 'NASDAQ:INTC', d: 'Intel Corp' },
             ],
         },
-        {
-            title: 'Services',
-            symbols: [
-                { s: 'NASDAQ:AMZN', d: 'Amazon' },
-                { s: 'NYSE:BABA', d: 'Alibaba Group Hldg Ltd' },
-                { s: 'NYSE:T', d: 'At&t Inc' },
-                { s: 'NYSE:WMT', d: 'Walmart' },
-                { s: 'NYSE:V', d: 'Visa' },
-            ],
-        },
     ],
-    support_host: 'https://www.tradingview.com', 
-    backgroundColor: '#141414', 
-    width: '100%', 
-    height: 600, 
-    showSymbolLogo: true, 
-    showChart: true, 
+    support_host: 'https://www.tradingview.com',
+    backgroundColor: 'rgba(0, 0, 0, 0)',
+    width: '100%',
+    height: 600,
+    showSymbolLogo: true,
+    showChart: true,
 };
 
 export const HEATMAP_WIDGET_CONFIG = {
@@ -133,8 +128,8 @@ export const MARKET_DATA_WIDGET_CONFIG = {
     locale: 'en',
     showSymbolLogo: true,
     colorTheme: 'dark',
-    isTransparent: false,
-    backgroundColor: '#0F0F0F',
+    isTransparent: true,
+    backgroundColor: 'rgba(0, 0, 0, 0)',
     symbolsGroups: [
         {
             name: 'Financial',
@@ -142,9 +137,6 @@ export const MARKET_DATA_WIDGET_CONFIG = {
                 { name: 'NYSE:JPM', displayName: 'JPMorgan Chase' },
                 { name: 'NYSE:WFC', displayName: 'Wells Fargo Co New' },
                 { name: 'NYSE:BAC', displayName: 'Bank Amer Corp' },
-                { name: 'NYSE:HSBC', displayName: 'Hsbc Hldgs Plc' },
-                { name: 'NYSE:C', displayName: 'Citigroup Inc' },
-                { name: 'NYSE:MA', displayName: 'Mastercard Incorporated' },
             ],
         },
         {
@@ -152,32 +144,20 @@ export const MARKET_DATA_WIDGET_CONFIG = {
             symbols: [
                 { name: 'NASDAQ:AAPL', displayName: 'Apple' },
                 { name: 'NASDAQ:GOOGL', displayName: 'Alphabet' },
-                { name: 'NASDAQ:MSFT', displayName: 'Microsoft' },
-                { name: 'NASDAQ:FB', displayName: 'Meta Platforms' },
-                { name: 'NYSE:ORCL', displayName: 'Oracle Corp' },
-                { name: 'NASDAQ:INTC', displayName: 'Intel Corp' },
-            ],
-        },
-        {
-            name: 'Services',
-            symbols: [
-                { name: 'NASDAQ:AMZN', displayName: 'Amazon' },
-                { name: 'NYSE:BABA', displayName: 'Alibaba Group Hldg Ltd' },
-                { name: 'NYSE:T', displayName: 'At&t Inc' },
-                { name: 'NYSE:WMT', displayName: 'Walmart' },
-                { name: 'NYSE:V', displayName: 'Visa' },
             ],
         },
     ],
 };
 
+
 export const SYMBOL_INFO_WIDGET_CONFIG = (symbol: string) => ({
     symbol: symbol.toUpperCase(),
     colorTheme: 'dark',
+    theme: 'dark',
     isTransparent: true,
     locale: 'en',
     width: '100%',
-    height: 170,
+    height: 200,
 });
 
 export const CANDLE_CHART_WIDGET_CONFIG = (symbol: string) => ({
@@ -196,8 +176,8 @@ export const CANDLE_CHART_WIDGET_CONFIG = (symbol: string) => ({
     symbol: symbol.toUpperCase(),
     theme: 'dark',
     timezone: 'Etc/UTC',
-    backgroundColor: '#141414',
-    gridColor: '#141414',
+    backgroundColor: 'rgba(20, 20, 20, 1)',
+    gridColor: 'rgba(40, 40, 40, 1)',
     watchlist: [],
     withdateranges: false,
     compareSymbols: [],
@@ -222,8 +202,8 @@ export const BASELINE_WIDGET_CONFIG = (symbol: string) => ({
     symbol: symbol.toUpperCase(),
     theme: 'dark',
     timezone: 'Etc/UTC',
-    backgroundColor: '#141414',
-    gridColor: '#141414',
+    backgroundColor: 'rgba(20, 20, 20, 1)',
+    gridColor: 'rgba(40, 40, 40, 1)',
     watchlist: [],
     withdateranges: false,
     compareSymbols: [],
@@ -235,10 +215,11 @@ export const BASELINE_WIDGET_CONFIG = (symbol: string) => ({
 export const TECHNICAL_ANALYSIS_WIDGET_CONFIG = (symbol: string) => ({
     symbol: symbol.toUpperCase(),
     colorTheme: 'dark',
-    isTransparent: 'true',
+    theme: 'dark',
+    isTransparent: true,
     locale: 'en',
     width: '100%',
-    height: 400,
+    height: 450,
     interval: '1h',
     largeChartUrl: '',
 });
@@ -246,94 +227,34 @@ export const TECHNICAL_ANALYSIS_WIDGET_CONFIG = (symbol: string) => ({
 export const COMPANY_PROFILE_WIDGET_CONFIG = (symbol: string) => ({
     symbol: symbol.toUpperCase(),
     colorTheme: 'dark',
-    isTransparent: 'true',
+    theme: 'dark',
+    isTransparent: true,
     locale: 'en',
     width: '100%',
-    height: 440,
+    height: 500,
 });
 
 export const COMPANY_FINANCIALS_WIDGET_CONFIG = (symbol: string) => ({
     symbol: symbol.toUpperCase(),
     colorTheme: 'dark',
-    isTransparent: 'true',
+    theme: 'dark',
+    isTransparent: true,
     locale: 'en',
     width: '100%',
-    height: 464,
+    height: 500,
     displayMode: 'regular',
     largeChartUrl: '',
 });
 
 export const POPULAR_STOCK_SYMBOLS = [
-    
-    'AAPL',
-    'MSFT',
-    'GOOGL',
-    'AMZN',
-    'TSLA',
-    'META',
-    'NVDA',
-    'NFLX',
-    'ORCL',
-    'CRM',
-
-    'ADBE',
-    'INTC',
-    'AMD',
-    'PYPL',
-    'UBER',
-    'ZOOM',
-    'SPOT',
-    'SQ',
-    'SHOP',
-    'ROKU',
-
-   
-    'SNOW',
-    'PLTR',
-    'COIN',
-    'RBLX',
-    'DDOG',
-    'CRWD',
-    'NET',
-    'OKTA',
-    'TWLO',
-    'ZM',
-
-
-    'DOCU',
-    'PTON',
-    'PINS',
-    'SNAP',
-    'LYFT',
-    'DASH',
-    'ABNB',
-    'RIVN',
-    'LCID',
-    'NIO',
-
-   
-    'XPEV',
-    'LI',
-    'BABA',
-    'JD',
-    'PDD',
-    'TME',
-    'BILI',
-    'DIDI',
-    'GRAB',
-    'SE',
+    'BTC', 'ETHUSD',
+    'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA', 'META', 'NVDA', 'NFLX', 'ORCL', 'CRM',
+    'ADBE', 'INTC', 'AMD', 'PYPL', 'UBER', 'ZOOM', 'SPOT', 'SQ', 'SHOP', 'ROKU',
 ];
 
 export const NO_MARKET_NEWS =
     '<p class="mobile-text" style="margin:0 0 20px 0;font-size:16px;line-height:1.6;color:#4b5563;">No market news available today. Please check back tomorrow.</p>';
 
 export const WATCHLIST_TABLE_HEADER = [
-    'Company',
-    'Symbol',
-    'Price',
-    'Change',
-    'Market Cap',
-    'P/E Ratio',
-    'Alert',
-    'Action',
+    'Company', 'Symbol', 'Price', 'Change', 'Market Cap', 'P/E Ratio', 'Alert', 'Action',
 ];

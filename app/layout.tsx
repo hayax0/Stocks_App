@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lista de sinais",
+  title: "Signalist",
   description: "Acompanhe os preços das ações em tempo real, receba alertas personalizados e explore insights detalhados das empresas.",
 };
 
