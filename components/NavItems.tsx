@@ -22,7 +22,7 @@ const NavItems = () => {
         if (label === 'Search') {
           return (
             <li key={href}>
-              <SearchCommand trigger="text" label="Search" initialStocks={[]} />
+              <SearchCommand trigger="text" label="Search" />
             </li>
           )
         }
