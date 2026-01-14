@@ -4,7 +4,6 @@ import { WELCOME_EMAIL_TEMPLATE, NEWS_SUMMARY_EMAIL_TEMPLATE } from './templates
 export const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        // Agora volta a usar as variáveis (já que arrumamos o .env)
         user: process.env.NODEMAILER_EMAIL,
         pass: process.env.NODEMAILER_PASSWORD,
     },
@@ -16,7 +15,7 @@ export const sendWelcomeEmail = async ({ email, name, intro }: any) => {
         .replace('{{intro}}', intro);
 
     const mailOptions = {
-        from: `"Signalist" <${process.env.NODEMAILER_EMAIL}>`, // Segurança aqui também
+        from: `"Signalist" <${process.env.NODEMAILER_EMAIL}>`,
         to: email,
         subject: 'Welcome to Signalist',
         text: 'Thanks for signing up to Signalist!',
