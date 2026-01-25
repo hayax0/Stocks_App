@@ -7,25 +7,19 @@ The project focuses on a robust **Event-Driven Architecture**, ensuring that hea
 
 ---
 
-## 📸 Preview
 
-![Signalist Dashboard]([LINK_PARA_UMA_IMAGEM_DO_DASHBOARD_AQUI])
-*(Add a screenshot or GIF of the dashboard here)*
+##  Key Features
 
----
-
-## 🚀 Key Features
-
-* **🤖 AI-Powered Onboarding:** Uses **Google Gemini** to analyze user data (investment goals, risk tolerance) and generate personalized welcome emails in real-time.
-* **⚡ Event-Driven Architecture:** Integrated with **Inngest** to handle background jobs and queues. User actions trigger asynchronous events for reliable data processing.
-* **📊 Financial Dashboard:** Real-time visualization of market data (Stocks, Crypto) with interactive charts.
-* **🔐 Secure Authentication:** Robust auth system using **Better-Auth** with secure session management (HttpOnly Cookies) and Middleware protection.
-* **📧 Automated Email System:** Transactional emails sent via **Resend**, orchestrated by Inngest workflows.
-* **🖥️ Desktop-First Design:** Optimized for large screens to provide detailed analytical tools and charts.
+ **AI-Powered Onboarding:** Uses **Google Gemini** to analyze user data (investment goals, risk tolerance) and generate personalized welcome emails in real-time.
+ **Event-Driven Architecture:** Integrated with **Inngest** to handle background jobs and queues. User actions trigger asynchronous events for reliable data processing.
+ **Financial Dashboard:** Real-time visualization of market data (Stocks, Crypto) with interactive charts.
+ **Secure Authentication:** Robust auth system using **Better-Auth** with secure session management (HttpOnly Cookies) and Middleware protection.
+ **Automated Email System:** Transactional emails sent via **Resend**, orchestrated by Inngest workflows.
+ **Desktop-First Design:** Optimized for large screens to provide detailed analytical tools and charts.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Core
 * **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
@@ -41,7 +35,7 @@ The project focuses on a robust **Event-Driven Architecture**, ensuring that hea
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 The application follows a modern serverless architecture:
 
@@ -56,7 +50,7 @@ The application follows a modern serverless architecture:
 
 ---
 
-## 🔧 Getting Started
+## Getting Started
 
 Follow these steps to run the project locally:
 
@@ -115,7 +109,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the app.
 
 ---
 
-## 🚧 Roadmap & Improvements
+## Roadmap & Improvements
 
 * [ ] **Mobile Optimization:** Refactor layouts for better mobile responsiveness.
 * [ ] **Advanced Charts:** Add technical indicators (RSI, MACD) to the dashboard.
@@ -123,7 +117,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the app.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -135,10 +129,10 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
 
-## 📝 License
+## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-Developed with 💜 by **Caio Campos**.
+Developed with ❤️ by **Caio Campos**.
